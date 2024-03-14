@@ -1,0 +1,17 @@
+version: '3'
+services:
+  hero-api:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - hero-database
+    environment:
+      MONGODB_URI: "mongodb://hero-database:27017"
+  hero-database:
+    image: mongo:6.0
+    restart: always
+    ports:
+      - "27019:27019"
