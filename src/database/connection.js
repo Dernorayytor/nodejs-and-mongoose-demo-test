@@ -38,7 +38,7 @@ class MongoDatabase {
   connection;
   constructor() {
     this.uri =
-      "mongodb+srv://64160207:q1OWW2VGiSmAKG69@cluster0.izvegzu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+      "";
     this.clientOptions = {
       serverApi: { version: "1", strict: true, deprecationErrors: true },
     };
